@@ -49,7 +49,12 @@ end
 
 
 def add_student
-  list_periods
+  if Period.all.empty?
+    puts "Please add a period before trying to add a student."
+    menu
+  else
+    list_periods
+  end
   "\n"
   puts "Please enter the name of the period you would like to add a student to."
   selected_period = gets.chomp
@@ -67,7 +72,12 @@ end
 
 
 def add_assignment
-  list_students
+  if Student.all.empty?
+    puts "Please add a student before trying to add an assignment"
+    menu
+  else
+    list_students
+  end
   "\n"
   puts "Please enter the name of the student you would like to add an assignment to."
   selected_student = gets.chomp
@@ -107,7 +117,12 @@ def list_assignments
 end
 
 def list_students_by_period
-  list_periods
+  if Period.all.empty?
+    puts "Please enter a period."
+    menu
+  else
+    list_periods
+  end
   puts "Please enter the name of the period to list its students"
   selected_period = gets.chomp
   Period.all.each do |period|
@@ -120,7 +135,12 @@ def list_students_by_period
 end
 
 def list_assignments_by_student
-  list_students
+  if Student.all.empty?
+    puts "You must create a student before you can see his/her assignments"
+    menu
+  else
+    list_students
+  end
   puts "Please enter the name of the student to list his/her assignments"
   selected_student = gets.chomp
   Student.all.each do |student|
