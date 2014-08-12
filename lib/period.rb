@@ -22,8 +22,7 @@ class Period
   end
 
   def add_student(new_student)
-    student = Student.new(new_student)
-    @students << student
+    @students << new_student
   end
 
   def ==(another_period)

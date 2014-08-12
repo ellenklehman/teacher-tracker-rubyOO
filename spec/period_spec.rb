@@ -23,7 +23,7 @@ describe 'Period' do
     it 'adds a student object to a period' do
       test_period = Period.new({'name' => 'One'})
       test_student = Student.new({'name' => 'Johnny Appleseed'})
-      test_period.add_student('name' => 'Johnny Appleseed')
+      test_period.add_student(test_student)
       expect(test_period.students).to eq [test_student]
     end
   end
