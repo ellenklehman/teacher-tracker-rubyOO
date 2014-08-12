@@ -5,4 +5,8 @@ class Student
     @name = attributes['name']
     @assignments = []
   end
+
+  def ==(another_student)
+    self.name == another_student.name
+  end
 end

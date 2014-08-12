@@ -18,7 +18,17 @@ describe 'Period' do
       expect(Period.all).to eq [test_period]
     end
   end
-  # describe '.students' do
+
+  describe 'add_student' do
+    it 'adds a student object to a period' do
+      test_period = Period.new({'name' => 'One'})
+      test_student = Student.new({'name' => 'Johnny Appleseed'})
+      test_period.add_student('name' => 'Johnny Appleseed')
+      expect(test_period.students).to eq [test_student]
+    end
+  end
+
+  # describe 'students' do
   #   it 'can hold an array of students' do
   #     test_period = Period.new({'name' => 'One'})
   #     test_student = Student.new({'name' => 'Johnny Appleseed'})
