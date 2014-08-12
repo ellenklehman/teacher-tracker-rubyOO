@@ -15,7 +15,7 @@ class Student
   end
 
   def add_assignment(new_assignment)
-    assignment = Assignment.new(new_assignment)
+    assignment = new_assignment
     @assignments << assignment
   end
 end
