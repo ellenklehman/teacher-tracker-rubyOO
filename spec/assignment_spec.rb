@@ -12,6 +12,14 @@ describe 'Assignment'  do
     end
   end
 
+  describe 'save' do
+    it 'saves the assignment into all_assignments' do
+      test_assignment = Assignment.new({'name' => 'English essay', 'score' => 0})
+      test_assignment.save
+      expect(Assignment.all).to eq [test_assignment]
+    end
+  end
+
   describe 'add_score' do
     it 'calculates the assignment score and stores it in the assignment object' do
       test_assignment = Assignment.new({'name' => 'English essay', 'score' => 0})
