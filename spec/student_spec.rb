@@ -11,6 +11,14 @@ describe 'Student' do
     end
   end
 
+  describe 'save' do
+    it 'saves the student into all_students' do
+      test_student = Student.new({'name' => 'Johnny Appleseed'})
+      test_student.save
+      expect(Student.all).to eq [test_student]
+    end
+  end
+
   describe 'add_assignment' do
     it 'adds an assignment to a student' do
       test_student = Student.new({'name' => 'Johnny Appleseed'})
