@@ -27,12 +27,4 @@ describe 'Period' do
       expect(test_period.students).to eq [test_student]
     end
   end
-
-  # describe 'students' do
-  #   it 'can hold an array of students' do
-  #     test_period = Period.new({'name' => 'One'})
-  #     test_student = Student.new({'name' => 'Johnny Appleseed'})
-  #     expect(test_period.students).to eq [test_student]
-  #   end
-  # end
 end

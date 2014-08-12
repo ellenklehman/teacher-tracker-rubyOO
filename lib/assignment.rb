@@ -6,4 +6,8 @@ class Assignment
     @score = attributes['score']
   end
 
+  def ==(another_assignment)
+    self.name == another_assignment.name
+  end
+
 end

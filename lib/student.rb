@@ -9,4 +9,13 @@ class Student
   def ==(another_student)
     self.name == another_student.name
   end
+
+  def assignments
+    @assignments
+  end
+
+  def add_assignment(new_assignment)
+    assignment = Assignment.new(new_assignment)
+    @assignments << assignment
+  end
 end

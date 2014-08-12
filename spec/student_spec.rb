@@ -10,4 +10,14 @@ describe 'Student' do
       expect(test_student.assignments).to eq []
     end
   end
+
+  describe 'add_assignment' do
+    it 'adds an assignment to a student' do
+      test_student = Student.new({'name' => 'Johnny Appleseed'})
+      test_assignment = Assignment.new({'name' => 'English essay', 'score' => 0})
+      test_student.add_assignment('name' => 'English essay', 'score' => 0)
+      expect(test_student.assignments).to eq [test_assignment]
+    end
+  end
+
 end
